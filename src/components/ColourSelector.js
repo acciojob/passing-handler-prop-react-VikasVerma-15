@@ -6,7 +6,7 @@ const ColourSelector = (props) => {
 
   return (
     <button
-      className={classname} // use actual classname
+      className={className} // use actual classname
       onClick={() => selectNextBackground({ background })}
     >
       {label} {/* display the label */}
