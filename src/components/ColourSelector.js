@@ -1,15 +1,14 @@
 import React from 'react';
 
-const ColourSelector = (props) => {
-  const { config, selectNextBackground } = props;
-  const { background, classname, label } = config; // destructure correctly
+const ColourSelector = ({ config, selectNextBackground }) => {
+  const { background, classname, label } = config;
 
   return (
     <button
-      className={classname} // use the destructured classname from config
-      onClick={() => selectNextBackground({ background })}
+      className={classname} // apply CSS class
+      onClick={() => selectNextBackground({ background })} // update selected color in parent
     >
-      {label} {/* display the label */}
+      {label} {/* show the color name */}
     </button>
   );
 }
