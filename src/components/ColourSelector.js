@@ -1,14 +1,15 @@
 import React from 'react';
 
 const ColourSelector = ({ config, selectNextBackground }) => {
-  const { background, classname, label } = config;
+  const { background, classname, label, key } = config;
 
   return (
     <button
-      className={classname} // apply CSS class
-      onClick={() => selectNextBackground({ background })} // update selected color in parent
+      className={classname}            
+      data-testid={key}               
+      onClick={() => selectNextBackground({ background })}
     >
-      {label} {/* show the color name */}
+      {label}                         // display the color label
     </button>
   );
 }
